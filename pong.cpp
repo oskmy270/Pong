@@ -259,7 +259,7 @@ void report()
         double average = totalResponseTime / (pingsSent - pingsToExclude);
         printf("Stats avg/stddev : %f / %f\n", average, sqrt((sumOfResponseTimesSquared / (pingsReceived - pingsToExclude)) - (average * average)));
         printf("----------------------------------------------------------------\n");
-        printf("This is a modified version to test some bugs. /Oskar");    
+        printf("This is a modified version to test some bugs.\n /Oskar\n");    
     }
 }
 
@@ -555,6 +555,7 @@ int main(int argc, const char** argv)
                     {
                         datagramSizeSet = true;
                         icmpPayloadLength = atoi(argv[i + 1]) - ICMP_MINLEN - IP_MINLENGTH;
+                        printf("Payload size: "+icmpPayloadLength+"\n")
                         if(icmpPayloadLength < 8)
                         {
                             printf("Error: datagram size must be greater than 50 bytes.\n");
