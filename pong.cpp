@@ -920,7 +920,8 @@ int main(int argc, const char** argv)
                     }
                     else if(increasingSize)
                     {
-                        printf("Size to grow=",sizeGrowth,".\n");
+                        printf("sizeGrowth=%d.\n", sizeGrowth);
+                        printf("icmpPayloadSize=%d.\n", icmpPayloadSize);
                     	icmpPayloadLength += sizeGrowth;
                         pingICMP(socketDescriptor, icmpPayloadLength);
                     }
