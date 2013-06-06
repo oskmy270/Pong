@@ -555,7 +555,6 @@ int main(int argc, const char** argv)
                     {
                         datagramSizeSet = true;
                         icmpPayloadLength = atoi(argv[i + 1]) - ICMP_MINLEN - IP_MINLENGTH;
-                        printf("Payload size: ", icmpPayloadLength, "\n");
                         if(icmpPayloadLength < 8)
                         {
                             printf("Error: datagram size must be greater than 50 bytes.\n");
@@ -726,7 +725,7 @@ int main(int argc, const char** argv)
                             
                             //Subtract growth from initial once so when we ping, we can add sizeGrowth to it every time,
                             //and initialGrowth is still proper
-                            icmpPayloadLength = sizeInitial - sizeGrowth - IP_MINLENGTH - ICMP_MINLENGTH + 8;
+                            //icmpPayloadLength = sizeInitial - sizeGrowth - IP_MINLENGTH - ICMP_MINLENGTH + 8;
                         }
                         else
                         {
