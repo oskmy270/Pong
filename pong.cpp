@@ -197,7 +197,7 @@ static u_short checksum(u_short *ICMPHeader, int len)
 void pingICMP(int socketDescriptor, int icmpPayloadLength)
 {
     /* Get time, put it in the packet */
-    
+    printf("Payload=%d\n", icmpPayloadLength);
     /* Set time sent */
 #ifdef __MACH__
     host_get_clock_service(mach_host_self(), SYSTEM_CLOCK, &cclock);
