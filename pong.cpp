@@ -555,7 +555,7 @@ int main(int argc, const char** argv)
                     {
                         datagramSizeSet = true;
                         icmpPayloadLength = atoi(argv[i + 1]) - ICMP_MINLEN - IP_MINLENGTH;
-                        printf("Payload size: "+icmpPayloadLength+"\n")
+                        printf("Payload size: "+icmpPayloadLength+"\n");
                         if(icmpPayloadLength < 8)
                         {
                             printf("Error: datagram size must be greater than 50 bytes.\n");
