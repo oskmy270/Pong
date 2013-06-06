@@ -259,6 +259,7 @@ void report()
         double average = totalResponseTime / (pingsSent - pingsToExclude);
         printf("Stats avg/stddev : %f / %f\n", average, sqrt((sumOfResponseTimesSquared / (pingsReceived - pingsToExclude)) - (average * average)));
         printf("----------------------------------------------------------------\n");
+        printf("This is a modified version to test some bugs. /Oskar");    
     }
 }
 
