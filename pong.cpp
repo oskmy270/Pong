@@ -215,7 +215,7 @@ void pingICMP(int socketDescriptor, int icmpPayloadLength)
     /* Compute checksum */
 	icmpHeader->icmp_cksum = 0;
 	icmpHeader->icmp_cksum = checksum((u_short *)icmpHeader, sizeof(*icmpHeader));
-    
+	printf("Payload=%d\n", icmpPayloadLength);
 	/* Try to send the packet */
 	sent = sendto(socketDescriptor, packet, icmpPayloadLength + 8, 0, (struct sockaddr *)whereto, sizeof(struct sockaddr));
     
